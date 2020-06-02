@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var show=false
+    @State var show = false
+    @State var viewState = CGSize.zero
     
     var body: some View {
         ZStack{
@@ -22,6 +23,7 @@ struct ContentView: View {
                 .cornerRadius(20)//圆角
                 .shadow(radius: 20)//阴影
                 .offset(x:0,y:show ? -400 : -40)//偏移
+                .offset(x: viewState.width, y: viewState.height)
                 .scaleEffect(0.9)//缩进？
                 .rotationEffect(.degrees(show ? 0 : 10))//旋转 angle:角度
                 .rotation3DEffect(Angle(degrees: 10), axis: (x:10.0,y:0,z:0))//3D旋转
@@ -33,6 +35,7 @@ struct ContentView: View {
                 .cornerRadius(20)
                 .shadow(radius: 20)
                 .offset(x : 0 , y : show ? -200 : -20)
+                .offset(x: viewState.width, y: viewState.height)
                 .scaleEffect(0.95)
                 .rotationEffect(.degrees(show ? 0 : 5))
                 .rotation3DEffect(Angle(degrees: 5), axis: (x:10.0,y:0,z:0))
@@ -40,10 +43,22 @@ struct ContentView: View {
                 .animation(.easeInOut(duration: 0.3))
             
             CardView()//卡片整合代码
+                .offset(x: viewState.width, y: viewState.height)
                 .blendMode(.hardLight)
+                .animation(.spring(response: 0.3, dampingFraction: 0.6, blendDuration: 0))//response 滞后时间，dampingFraction 反弹力度，
                 .onTapGesture {
-                    self.show.toggle()//true&false 切换
+                    self.show.toggle()//onTapGesture 点击时间 true&false 切换
             }
+            .gesture(
+                DragGesture().onChanged{ value in
+                    self.viewState=value.translation
+                    self.show=true
+                }
+                .onEnded{ value in
+                    self.viewState = .zero
+                    self.show=false
+                }//拖动卡片 DragGesture().onChanged 获取拖动位置，onEnged 松开后
+            )
             
             BottomCardView()
                 .blur(radius:show ? 20 : 0)
