@@ -14,6 +14,7 @@
 		F5EA16E82484DE9F003F6775 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5EA16E72484DE9F003F6775 /* Assets.xcassets */; };
 		F5EA16EB2484DE9F003F6775 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5EA16EA2484DE9F003F6775 /* Preview Assets.xcassets */; };
 		F5EA16EE2484DE9F003F6775 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5EA16EC2484DE9F003F6775 /* LaunchScreen.storyboard */; };
+		F5FBEF1D2488B6620050FB6B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FBEF1C2488B6620050FB6B /* HomeView.swift */; };
 		F5FEDAD32487363A00514E6E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FEDAD22487363A00514E6E /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		F5EA16EA2484DE9F003F6775 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F5EA16ED2484DE9F003F6775 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5EA16EF2484DE9F003F6775 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5FBEF1C2488B6620050FB6B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F5FEDAD22487363A00514E6E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 				F5FEDAD22487363A00514E6E /* MenuView.swift */,
 				F5EA16E72484DE9F003F6775 /* Assets.xcassets */,
 				F564E6B024878748008E4B13 /* Home.swift */,
+				F5FBEF1C2488B6620050FB6B /* HomeView.swift */,
 				F5EA16EC2484DE9F003F6775 /* LaunchScreen.storyboard */,
 				F5EA16EF2484DE9F003F6775 /* Info.plist */,
 				F5EA16E92484DE9F003F6775 /* Preview Content */,
@@ -155,6 +158,7 @@
 				F5EA16E22484DE9D003F6775 /* AppDelegate.swift in Sources */,
 				F5FEDAD32487363A00514E6E /* MenuView.swift in Sources */,
 				F564E6B124878748008E4B13 /* Home.swift in Sources */,
+				F5FBEF1D2488B6620050FB6B /* HomeView.swift in Sources */,
 				F5EA16E42484DE9D003F6775 /* SceneDelegate.swift in Sources */,
 				F5EA16E62484DE9D003F6775 /* ContentView.swift in Sources */,
 			);
