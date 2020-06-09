@@ -64,8 +64,8 @@ struct AvatarView: View {
     var body: some View {
         Button(action: { self.showProfile.toggle() }) {
             Image("Avatar")
-                .renderingMode(.original)
-                .resizable()
+                .renderingMode(.original)//渲染模式
+                .resizable()//自适应大小
                 .frame(width: 36,height: 36)
                 .clipShape(Circle())//圆形图像
         }
